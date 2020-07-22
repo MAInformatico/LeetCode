@@ -4,11 +4,11 @@
  */
 var permute = function(nums) {
     const result = [];    
-    function permute(data, op) { //backtracking algorithm
-        if(!op.length) result.push(data);
+    function permute(data, ops) { //backtracking algorithm
+        if(!ops.length) result.push(data);
         
-        for(let i = 0; i < options.length; i++) {
-            permute([...data, op[i]], [...op.slice(0, i), ...op.slice(i+1)]);
+        for(let i = 0; i < ops.length; i++) {
+            permute([...data, ops[i]], [...ops.slice(0, i), ...ops.slice(i+1)]);
         }
     }
     permute([], nums)

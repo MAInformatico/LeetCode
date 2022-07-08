@@ -6,7 +6,7 @@ class Solution:
                 return 0 if groups == target else float('inf')
             
             if houses[i] != 0:
-                return min_cost_helper(i + 1, houses[i], groups + int(previousColor != houses[i]))
+                return minCostDynamicProgramming(i + 1, houses[i], groups + int(previousColor != houses[i]))
             
             total = float('inf')
             for color in range(1, n + 1):

@@ -18,9 +18,9 @@ class Solution:
                     ret = backtrack(index + 1)
                     if ret:
                         return True
-                    res[i] -= matchsticks[index]
+                    result[i] -= matchsticks[index]
                     
-                    if res[i] == 0:
+                    if result[i] == 0:
                         break
             return False
         
